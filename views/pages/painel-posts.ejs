@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="painel-posts.css">
+</head>
+<body>
+    <header>
+        <%- include("../partials/header") %>
+    </header>
+    <form action="/painel-posts" method="POST">
+        <div class="container">
+            <div class="info-basicas">
+                <label for="titulo">Titulo:</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ex: Criatividade S.A" required>
+                <label for="descricao">Descricao:</label>
+                <input type="text" id="descricao" name="descricao" placeholder="Ex: Livro sobre criatividade" required>
+                <label for="linkCapa">Capa do Livro:</label>
+                <input type="text" id="linkCapa" name="linkCapa" placeholder="https://m.media-amazon.com/images/I/41qs24vpygL.jpg" required>
+                <label for="categoria">Categoria:</label>
+                <input type="text" id="categoria" name="categoria" placeholder="Terror" required>
+                <div class="submitForm">
+                    <input class="submitButao" type="submit" value="Salvar">
+                </div> 
+            </div>
+            <div class="conteudo">
+                <label for="conteudo">Conteudo:</label>
+                <textarea name="conteudo" id="conteudo" cols="30" rows="45" placeholder="Esse livro eh muito legal :)" required></textarea>
+            </div>
+        </div>  
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+header {
+    font-family: "Roboto";
+    background-color: #E7D56D;
+    box-shadow: 1px 1px 10px black;
+}
+
+.listHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.logo {
+    font-size: 2em;
+    border-bottom: 3px solid black;
+    padding: 0 3px 3px 3px;
+    letter-spacing: 7px;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: black;
+}
+
+.itemHeader {
+    font-size: 1.2em;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    transition: 3ms;
+    margin: 0 16px;
+}
+
+.itemHeader:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.itemHeader a {
+    text-decoration: none;
+    color: black;
+}

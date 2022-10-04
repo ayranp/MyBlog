@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="header.css">
+    <title>Blog</title>
+</head>
+<body>
+    <header>
+        <%- include("../partials/header") %>
+    </header>
+    <div class="container-home">
+        <main class="container-main">
+            <ul class="container-lista-de-artigos">
+                <% posts.forEach(posts => { %>
+                    <li class="item-Artigo">
+                        <article class="artigo-home">
+                             <h2><%= posts.titulo %></h2>
+                             <h3><%= posts.descricao %></h3>
+                             <time><%= posts.createdAt.toLocaleDateString(  ) %></time>
+                             <img src= <%= posts.linkCapa %> alt="">
+                             <p><%= posts.conteudo %></p>
+                        </article>
+                    </li>
+                <% }) %>
+            </ul>
+        </main>
+        <aside class="container-sidebar">
+            <h4 class="categorias">CATEGORIAS</h4>
+            <ul class="lista-categorias">
+                <li>Terror (<%=terror %>)</li>
+                <li>Ciências (<%= ciencias %>)</li>
+                <li>Fantasia (<%= fantasia %>)</li>
+                <li>Auto Ajuda (<%= autoAjuda %>)</li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>
